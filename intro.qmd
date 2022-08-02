@@ -1,5 +1,7 @@
 # Introduction
 
+[Link to Slides](https://slides.com/neeldhara/dsa1-w01)
+
 ## WDYM, data structures?
 
 We will keep it casual and skip formal definitions for now. 👀
