@@ -114,9 +114,16 @@ The [game of 100](https://www.youtube.com/watch?v=846A4rgO_os) goes like this: I
 
 What if you want to write a program that mimics the winning strategy?
 
-Note that this game can go on for at most a 100 steps, and in fact at most 20 when you employ said winning strategy. So one way to go about this is to declare 20 variables to track the 20 numbers said between the players. But a moment's reflection may reveal that you *don't* need to store anything at all. 
+Note that this game can go on for at most a 100 steps, and in fact exactly 20 steps (or ten rounds) when you employ said winning strategy. So one way to go about this is to declare 20 variables to track the 20 numbers exchanged between the players. But a moment's reflection may reveal that you *don't* need to store anything at all. 
+
+
+:::{.callout-caution}
+
+## Exercise
 
 Can you write a program that makes the first move, prompts the user for their moves on their turn, uses the winning strategy discussed above, and uses no variables for explicit storage?
+
+:::
 
 ## Representing a Game - II
 
