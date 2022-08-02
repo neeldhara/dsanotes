@@ -4,13 +4,4 @@ These are running notes from my course on Data Structures and Algorithms at IIT 
 
 If you would like to have access to the weekly assignments, you might want to register for the course here (it's free).
 
-
 <div id="hyvor-talk-view"></div>
-<script type="text/javascript">
-    var HYVOR_TALK_WEBSITE = 6232;
-    var HYVOR_TALK_CONFIG = {
-        url: false,
-        id: false
-    };
-</script>
-<script async type="text/javascript" src="//talk.hyvor.com/web-api/embed.js"></script>

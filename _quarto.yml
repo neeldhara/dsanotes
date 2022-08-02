@@ -4,6 +4,7 @@ project:
 book:
   title: "Casual Musings on <br> Data Structures and Algorithms"
   author: "Neeldhara Misra"
+  margin-footer: hyvor.html
   date: "8/2/2022"
   chapters:
     - index.qmd
@@ -20,5 +21,6 @@ format:
   pdf:
     documentclass: scrreprt
 
-
-
+resources: 
+  - styles.css
+  - fonts/
