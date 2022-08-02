@@ -116,15 +116,35 @@
     }
     
     
-p,a{
+p,a,summary,li{
     font-family: 'heliotrope_3', Helvetica, sans-serif !important;
+}
+
+.figure-caption{
+    font-size: 0.7em;
 }
 
 h1,h2,h3{
     font-family: 'amsterdamregular', Helvetica, sans-serif !important;
 }
 
+h1{
+    font-size: 2.75em;
+}
+
+h2{
+    font-size: 2em;
+}
+
+h3{
+    font-size: 1.25em;
+}
+
 #toc-title{
     font-family: 'quinttorregular', Helvetica, sans-serif !important;
     font-size: 1.5em;
+}
+
+#preface h1{
+    display: none;
 }

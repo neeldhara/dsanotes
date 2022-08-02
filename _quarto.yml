@@ -9,8 +9,6 @@ book:
   chapters:
     - index.qmd
     - intro.qmd
-    - summary.qmd
-    - references.qmd
 
 bibliography: references.bib
 
@@ -18,6 +16,7 @@ format:
   html:
     theme: cosmo
     css: styles.css
+    html-math-method: katex
   pdf:
     documentclass: scrreprt
 
