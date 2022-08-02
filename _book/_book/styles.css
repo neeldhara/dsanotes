@@ -123,3 +123,8 @@ p,a{
 h1,h2,h3{
     font-family: 'amsterdamregular', Helvetica, sans-serif !important;
 }
+
+#toc-title{
+    font-family: 'quinttorregular', Helvetica, sans-serif !important;
+    font-size: 1.5em;
+}
