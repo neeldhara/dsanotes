@@ -210,11 +210,14 @@ Now, suppose we come up with our own player, whom we call the **majority mover**
 It seems like implementing the majority mover strategy would really require keeping track of everything. Or would it? You might observe at this point that it's enough to keep track of two counts: the number of rounds and the *number* of moves where the user has cheated: note that it does not matter when the cheats happened in the history of the game.
 
 
-- You could also...
+:::{.callout-note collapse="true"}
 
-	...track the number of cooperate moves along with the number of rounds; or the number of cheat moves and the number of cooperate moves. 
+## You could also...
 
-	At this point it's a matter of taste :)
+...track the number of cooperate moves along with the number of rounds; or the number of cheat moves and the number of cooperate moves. 
+
+At this point it's a matter of taste :)
+:::
 
 How about a **completely random** player? This one chooses a number **K** between 1 and N uniformly at random (let's not worry about *how* this is done for now, because that would be a story for another day), where N is the number of rounds played so far; and mimics the other player's **K**th move. To implement this strategy, you really would need to keep track of the user's entire game history with the five variables, and also assume that you have a way of picking a number at random.
 
