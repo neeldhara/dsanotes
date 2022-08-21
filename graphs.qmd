@@ -27,6 +27,7 @@ Devise a walk through the city that would cross each of those bridges once and o
 <iframe width="560" height="315" src="https://www.youtube.com/embed/W18FDEA1jRQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 :::
 
+The question was addressed and answered by Euler (1736). He did not solve this by "messing around" with all possible ways of walking around the city and checking if any of the walks satisfied the desired criteria. His more systematic approach involved modeling the problem abstractly, and making some key observations that ultimately led to the solution --- not just for this problem, but for all problems with a similar framing!
 
 :::{.callout-note}
 ## Classroom Activity with Eulerian Paths
@@ -39,8 +40,6 @@ We can work through the "bridges puzzle" on this graph. In the classroom, we all
 
 This activity is an adaptation of the example from the [Intro to Algorithms](https://www.udacity.com/course/intro-to-algorithms--cs215) course at Udacity, where it appears in the first chapter with the title "A Social Network Magic Trick".
 :::
-
-The question was addressed and answered by Euler (1736). He did not solve this by "messing around" with all possible ways of walking around the city and checking if any of the walks satisfied the desired criteria. His more systematic approach involved modeling the problem abstractly, and making some key observations that ultimately led to the solution --- not just for this problem, but for all problems with a similar framing!
 
 Here's another similar-sounding and classic problem involving a chessboard, [also posed to Euler](https://en.chessbase.com/post/euler-and-the-knights-tour):
 
@@ -127,9 +126,8 @@ Listed below are some fairly common operations that come up when dealing with gr
 2. remove edge u v
 3. add vertex v
 4. remove vertex v
-5. find degree v
-6. find maxdegree G
-7. find mindegree G
+5. is u a neighbor of v?
+6. find degree v
 ```
 :::
 

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Casual Musings on Data Structures and Algorithms - 3&nbsp; When the Relationship Status is Simple: Representing Graphs.</title>
+<title>Casual Musings on  Data Structures and Algorithms - 3&nbsp; When the Relationship Status is Simple: Representing Graphs.</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -93,7 +93,7 @@ ul.task-list{list-style: none;}
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Casual Musings on Data Structures and Algorithms</a> 
+      <a href="./">Casual Musings on <br> Data Structures and Algorithms</a> 
     </div>
       </div>
       <div class="mt-2 flex-shrink-0 align-items-center">
@@ -236,6 +236,7 @@ The Problem
 </div>
 </div>
 </div>
+<p>The question was addressed and answered by Euler (1736). He did not solve this by “messing around” with all possible ways of walking around the city and checking if any of the walks satisfied the desired criteria. His more systematic approach involved modeling the problem abstractly, and making some key observations that ultimately led to the solution — not just for this problem, but for all problems with a similar framing!</p>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -247,7 +248,7 @@ Classroom Activity with Eulerian Paths
 </div>
 <div class="callout-body-container callout-body">
 <p>The picture below shows a few popular actors, with edges connecting pairs of those who have worked together in a movie together<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. The example is designed so that there are exactly two actors who participate in an odd number of pairings.</p>
-<p>We can work through the “bridges puzzle” on this graph. In the classroom, we all started with the vertex representing Juhi Chawla, “walked around the graph” visiting every edge exactly once, and the fun effect is that everyone ends up at Rishi Kapoor (or solves the puzzle incorrectly). From here, you can probably begin to guess the role of the two special vertices in the puzzle.</p>
+<p>We can work through the “bridges puzzle” on this graph. In the classroom, we all started with the vertex representing Juhi Chawla, “walked around” using every connection exactly once, and the fun effect is that everyone ends up at the vertex representing Rishi Kapoor (or solves the puzzle incorrectly). From here, you can probably begin to guess the role of the two special vertices in the puzzle.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/ch3-eulerpath.png" class="img-fluid figure-img"></p>
@@ -257,7 +258,6 @@ Classroom Activity with Eulerian Paths
 <p>This activity is an adaptation of the example from the <a href="https://www.udacity.com/course/intro-to-algorithms--cs215">Intro to Algorithms</a> course at Udacity, where it appears in the first chapter with the title “A Social Network Magic Trick”.</p>
 </div>
 </div>
-<p>The question was addressed and answered by Euler (1736). He did not solve this by “messing around” with all possible ways of walking around the city and checking if any of the walks satisfied the desired criteria. His more systematic approach involved modeling the problem abstractly, and making some key observations that ultimately led to the solution — not just for this problem, but for all problems with a similar framing!</p>
 <p>Here’s another similar-sounding and classic problem involving a chessboard, <a href="https://en.chessbase.com/post/euler-and-the-knights-tour">also posed to Euler</a>:</p>
 <blockquote class="blockquote">
 <p>“I found myself one day in a company where, on the occasion of a game of chess, someone proposed this question: <em>To move with a knight through all the squares of a chess board, without ever moving two times to the same square, and beginning with a given square.</em>”</p>
@@ -382,9 +382,8 @@ How would you do it?
 2. remove edge u v
 3. add vertex v
 4. remove vertex v
-5. find degree v
-6. find maxdegree G
-7. find mindegree G</code></pre>
+5. is u a neighbor of v?
+6. find degree v</code></pre>
 </div>
 </div>
 <p><strong>Edge Lists.</strong> The most natural way is to perhaps just braindump the full list of edges. This gives us all we need to know about <span class="math inline">G</span>.</p>
