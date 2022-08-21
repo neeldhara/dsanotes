@@ -1,4 +1,4 @@
-# Introduction
+# Data Structures and Structured Data
 
 [Link to Slides](https://slides.com/neeldhara/dsa1-w01)
 
@@ -35,7 +35,7 @@ Table 1. No free lunches.
 
 ## This *is* in fact a useful framing!
 
-![Table 1 Revisited. No Free Lunches](https://res.craft.do/user/full/3d4a958d-22f1-fb3d-0c42-caef4fb1c59b/87E0B0AB-B808-4C32-8DF7-EF2BD69BCF91_2/CypyQSw8tvZfr9IQrn73nsz6xxZs5c75Zk6ijQYErYQz/CleanShot%202022-08-02%20at%2000.47.27.png)
+![Table 1 Revisited. No Free Lunches](figures/ch1-table01.png)
 
 :::
 
@@ -45,7 +45,7 @@ Table 1. No free lunches.
 
 Let's say that you are spending a fine evening watching the #LockdownMath playlist from 3blue1brown. The first episode happens to be all about solving quadratics:
 
-![A screenshot from #LockdownMath showing Grant Sanderson solving quadratics.](https://res.craft.do/user/full/3d4a958d-22f1-fb3d-0c42-caef4fb1c59b/doc/4E6B79DE-9A1B-4B5B-BCF2-FC57558BFB20/865CCC92-D53C-491C-B17E-707BD3CB8BD2_2/wm7q6ro89jDvazHScFHORcIMMBiaJP5QhXhaOjKLWUcz/CleanShot%202022-08-01%20at%2023.39.42.png)
+![A screenshot from #LockdownMath showing Grant Sanderson solving quadratics.](figures/ch1-lockdownmath.png)
 
 Now, it's quite natural to want to "write a program", so to speak, that can take a quadratic equation such as $x^2 - 7x + 12$ as input and output its two roots.
 
@@ -61,7 +61,7 @@ px = "x^2 - 7x + 12";
 
 ## Now...
 
-![](https://res.craft.do/user/full/3d4a958d-22f1-fb3d-0c42-caef4fb1c59b/doc/4E6B79DE-9A1B-4B5B-BCF2-FC57558BFB20/6AC1CF76-855E-4BAA-B04B-F35E8ED27928_2/NjykDym2oLLzE81jZwTajZrnsKMwQmQd1vx12zkfRyEz/1mt4d7.jpeg "Meme: So preoccupied with if you could, you didn't stop to ask if you should.")
+![](figures/ch1-meme01.jpeg "Meme: So preoccupied with if you could, you didn't stop to ask if you should.")
 :::
 
 While this is a perfectly faithful representation, you can imagine that it would be slightly painful to work with. You would have to write some code that can "pull out" the parts of the string that represent the *numbers* you care about (in this example, $b = -7$ and $c = 12$), so that you can move on to your calculation, which is an *expression* involving numbers. 
@@ -130,13 +130,13 @@ Can you write a program that makes the first move, prompts the user for their mo
 
 If ~~you missed the first class~~ you haven't played the [Game of Trust](https://ncase.me/trust/), you are welcome to take a break and experience it now. Let's recollect the setup:
 
-![Illustration from an implementation by [Nicky Case](https://ncase.me/trust/).](https://res.craft.do/user/full/3d4a958d-22f1-fb3d-0c42-caef4fb1c59b/doc/4E6B79DE-9A1B-4B5B-BCF2-FC57558BFB20/507B2019-208F-4F42-B9F9-0A2181AEEF0D_2/lSjiOe7WFWFxvOZ2FmAj9mC7lybuiyx7xFPdLU3anZAz/CleanShot%202022-08-02%20at%2000.53.36.png "Alt text: The Game of Trust. You have one choice. In front of you is a machine: if you put a coin in the machine, the other player gets three coins and vice versa. You both can either choose to COOPERATE (put in coin), or CHEAT (don't put in coin). The image shows a cartoon machine with players on either side.")
+![Illustration from an implementation by [Nicky Case](https://ncase.me/trust/).](figures/ch1-game-trust.png "Alt text: The Game of Trust. You have one choice. In front of you is a machine: if you put a coin in the machine, the other player gets three coins and vice versa. You both can either choose to COOPERATE (put in coin), or CHEAT (don't put in coin). The image shows a cartoon machine with players on either side.")
 
 
 
 Suppose you want to implement your own version of this game, where the program responds to inputs from the user and plays according to a specific, pre-meditated strategy. Remember you have seen some strategies already:
 
-![A second illustration from the same implementation by [Nicky Case](https://ncase.me/trust/).](https://res.craft.do/user/full/3d4a958d-22f1-fb3d-0c42-caef4fb1c59b/doc/4E6B79DE-9A1B-4B5B-BCF2-FC57558BFB20/1D62783B-0E72-4F82-9F38-54E7DE4FCD65_2/vdQcBL7fwybySZWyHQNuRQo2yV4DHlsIvr0i4rZMg5sz/CleanShot%202022-08-02%20at%2000.59.50.png "Five player strategies also outlined below.")
+![A second illustration from the same implementation by [Nicky Case](https://ncase.me/trust/).](figures/ch1-players-trust.png "Five player strategies also outlined below.")
 
 We reproduce these strategies below:
 
@@ -229,7 +229,7 @@ Finally, consider that instead of fixing your program to play five rounds â€” ðŸ
 
 ## After all...
 
-![](https://res.craft.do/user/full/3d4a958d-22f1-fb3d-0c42-caef4fb1c59b/doc/4E6B79DE-9A1B-4B5B-BCF2-FC57558BFB20/B2CD1138-7E3F-4C82-AA43-CF9D9BBF25E9_2/HQDHh80kk0PbvQYwxyefHpYF1Ib8OTIA7vtSgDZW1WAz/75FEC739-2C5C-4707-9691-D73814755F5D.jpeg "Meme: we are professionals.")
+![](figures/ch1-meme02.jpeg "Meme: we are professionals.")
 :::
 
 Well, for the first few players, this is just a matter of upgrading your for loop (which you should have switched to already when you realised that you don't need all. those. variables.) to use N: and you are done.
@@ -259,7 +259,7 @@ What do you like about this method? What don't you like about it?
 :::
 
 
-Here'a another way, though: you could agree on a notation for the cards in the deck: e.g, a standard one is to use a number, A/J/Q/K to denote the value, and S/C/D/H to denote the suit, so every card can be represented as a pair of characters. For example the Ace of Diamonds would be AD, the five of spades would be 5S and the King of Hearts would be KH. With this in place, you could represent a hand also by simply *concatenating* these string representations of the hards in the hand.
+Here'a another way, though: you could agree on a notation for the cards in the deck: e.g, a standard one is to use a number, A/J/Q/K to denote the value, and S/C/D/H to denote the suit, so every card can be represented as a pair of characters. For example the Ace of Diamonds would be AD, the five of spades would be 5S and the King of Hearts would be KH. With this in place, you could represent a hand also by simply *concatenating* these string representations of the cards in the hand.
 
 :::{.callout-caution}
 ## Food for thought. 

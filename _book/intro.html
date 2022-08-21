@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Casual Musings on  Data Structures and Algorithms - 1&nbsp; Introduction</title>
+<title>Casual Musings on  Data Structures and Algorithms - 1&nbsp; Data Structures and Structured Data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -87,6 +87,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
+<link href="./sequences.html" rel="next">
 <link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -143,7 +144,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Data Structures and Structured Data</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -173,7 +174,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a>
+  <a href="./intro.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Data Structures and Structured Data</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sequences.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Playlists and Tweet Threads: <br>Representing Sequential Information</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./graphs.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">When the Relationship Status is Simple: <br>Representing Graphs.</span></a>
   </div>
 </li>
     </ul>
@@ -211,7 +222,7 @@ document.body.appendChild(script);
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Data Structures and Structured Data</span></h1>
 </div>
 
 
@@ -289,7 +300,7 @@ This <em>is</em> in fact a useful framing!
 <div class="callout-body-container callout-body">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://res.craft.do/user/full/3d4a958d-22f1-fb3d-0c42-caef4fb1c59b/87E0B0AB-B808-4C32-8DF7-EF2BD69BCF91_2/CypyQSw8tvZfr9IQrn73nsz6xxZs5c75Zk6ijQYErYQz/CleanShot%202022-08-02%20at%2000.47.27.png" class="img-fluid figure-img"></p>
+<p><img src="figures/ch1-table01.png" class="img-fluid figure-img"></p>
 <p></p><figcaption aria-hidden="true" class="figure-caption">Table 1 Revisited. No Free Lunches</figcaption><p></p>
 </figure>
 </div>
@@ -302,7 +313,7 @@ This <em>is</em> in fact a useful framing!
 <p>Let’s say that you are spending a fine evening watching the #LockdownMath playlist from 3blue1brown. The first episode happens to be all about solving quadratics:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://res.craft.do/user/full/3d4a958d-22f1-fb3d-0c42-caef4fb1c59b/doc/4E6B79DE-9A1B-4B5B-BCF2-FC57558BFB20/865CCC92-D53C-491C-B17E-707BD3CB8BD2_2/wm7q6ro89jDvazHScFHORcIMMBiaJP5QhXhaOjKLWUcz/CleanShot%202022-08-01%20at%2023.39.42.png" class="img-fluid figure-img"></p>
+<p><img src="figures/ch1-lockdownmath.png" class="img-fluid figure-img"></p>
 <p></p><figcaption aria-hidden="true" class="figure-caption">A screenshot from #LockdownMath showing Grant Sanderson solving quadratics.</figcaption><p></p>
 </figure>
 </div>
@@ -322,7 +333,7 @@ Now…
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><img src="https://res.craft.do/user/full/3d4a958d-22f1-fb3d-0c42-caef4fb1c59b/doc/4E6B79DE-9A1B-4B5B-BCF2-FC57558BFB20/6AC1CF76-855E-4BAA-B04B-F35E8ED27928_2/NjykDym2oLLzE81jZwTajZrnsKMwQmQd1vx12zkfRyEz/1mt4d7.jpeg" title="Meme: So preoccupied with if you could, you didn't stop to ask if you should." class="img-fluid"></p>
+<p><img src="figures/ch1-meme01.jpeg" title="Meme: So preoccupied with if you could, you didn't stop to ask if you should." class="img-fluid"></p>
 </div>
 </div>
 </div>
@@ -412,7 +423,7 @@ Exercise
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <figure class="figure">
-<img src="https://res.craft.do/user/full/3d4a958d-22f1-fb3d-0c42-caef4fb1c59b/doc/4E6B79DE-9A1B-4B5B-BCF2-FC57558BFB20/507B2019-208F-4F42-B9F9-0A2181AEEF0D_2/lSjiOe7WFWFxvOZ2FmAj9mC7lybuiyx7xFPdLU3anZAz/CleanShot%202022-08-02%20at%2000.53.36.png" title="Alt text: The Game of Trust. You have one choice. In front of you is a machine: if you put a coin in the machine, the other player gets three coins and vice versa. You both can either choose to COOPERATE (put in coin), or CHEAT (don't put in coin). The image shows a cartoon machine with players on either side." class="img-fluid figure-img">
+<img src="figures/ch1-game-trust.png" title="Alt text: The Game of Trust. You have one choice. In front of you is a machine: if you put a coin in the machine, the other player gets three coins and vice versa. You both can either choose to COOPERATE (put in coin), or CHEAT (don't put in coin). The image shows a cartoon machine with players on either side." class="img-fluid figure-img">
 </figure>
 <p></p><figcaption aria-hidden="true" class="figure-caption">Illustration from an implementation by <a href="https://ncase.me/trust/">Nicky Case</a>.</figcaption><p></p>
 </figure>
@@ -421,7 +432,7 @@ Exercise
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <figure class="figure">
-<img src="https://res.craft.do/user/full/3d4a958d-22f1-fb3d-0c42-caef4fb1c59b/doc/4E6B79DE-9A1B-4B5B-BCF2-FC57558BFB20/1D62783B-0E72-4F82-9F38-54E7DE4FCD65_2/vdQcBL7fwybySZWyHQNuRQo2yV4DHlsIvr0i4rZMg5sz/CleanShot%202022-08-02%20at%2000.59.50.png" title="Five player strategies also outlined below." class="img-fluid figure-img">
+<img src="figures/ch1-players-trust.png" title="Five player strategies also outlined below." class="img-fluid figure-img">
 </figure>
 <p></p><figcaption aria-hidden="true" class="figure-caption">A second illustration from the same implementation by <a href="https://ncase.me/trust/">Nicky Case</a>.</figcaption><p></p>
 </figure>
@@ -523,7 +534,7 @@ After all…
 </div>
 <div id="callout-11" class="callout-11-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><img src="https://res.craft.do/user/full/3d4a958d-22f1-fb3d-0c42-caef4fb1c59b/doc/4E6B79DE-9A1B-4B5B-BCF2-FC57558BFB20/B2CD1138-7E3F-4C82-AA43-CF9D9BBF25E9_2/HQDHh80kk0PbvQYwxyefHpYF1Ib8OTIA7vtSgDZW1WAz/75FEC739-2C5C-4707-9691-D73814755F5D.jpeg" title="Meme: we are professionals." class="img-fluid"></p>
+<p><img src="figures/ch1-meme02.jpeg" title="Meme: we are professionals." class="img-fluid"></p>
 </div>
 </div>
 </div>
@@ -565,7 +576,7 @@ Food for thought.
 <p>What do you like about this method? What don’t you like about it?</p>
 </div>
 </div>
-<p>Here’a another way, though: you could agree on a notation for the cards in the deck: e.g, a standard one is to use a number, A/J/Q/K to denote the value, and S/C/D/H to denote the suit, so every card can be represented as a pair of characters. For example the Ace of Diamonds would be AD, the five of spades would be 5S and the King of Hearts would be KH. With this in place, you could represent a hand also by simply <em>concatenating</em> these string representations of the hards in the hand.</p>
+<p>Here’a another way, though: you could agree on a notation for the cards in the deck: e.g, a standard one is to use a number, A/J/Q/K to denote the value, and S/C/D/H to denote the suit, so every card can be represented as a pair of characters. For example the Ace of Diamonds would be AD, the five of spades would be 5S and the King of Hearts would be KH. With this in place, you could represent a hand also by simply <em>concatenating</em> these string representations of the cards in the hand.</p>
 <div class="callout-caution callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -697,6 +708,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./sequences.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Playlists and Tweet Threads: <br>Representing Sequential Information</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

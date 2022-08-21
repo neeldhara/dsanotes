@@ -9,6 +9,8 @@ book:
   chapters:
     - index.qmd
     - intro.qmd
+    - sequences.qmd
+    - graphs.qmd
 
 bibliography: references.bib
 
