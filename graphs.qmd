@@ -33,7 +33,7 @@ Devise a walk through the city that would cross each of those bridges once and o
 
 The picture below shows a few popular actors, with edges connecting pairs of those who have worked together in a movie together^[I've been told that this representation is not complete, and indeed, I have only verified that the connections are justified... some of the missing edges are likely to be inaccurate.]. The example is designed so that there are exactly two actors who participate in an odd number of pairings.
 
-We can work through the "bridges puzzle" on this graph. In the classroom, we all started with the vertex representing Juhi Chawla, "walked around the graph" visiting every edge exactly once, and the fun effect is that everyone ends up at Rishi Kapoor (or solves the puzzle incorrectly). From here, you can probably begin to guess the role of the two special vertices in the puzzle. 
+We can work through the "bridges puzzle" on this graph. In the classroom, we all started with the vertex representing Juhi Chawla, "walked around" using every connection exactly once, and the fun effect is that everyone ends up at the vertex representing Rishi Kapoor (or solves the puzzle incorrectly). From here, you can probably begin to guess the role of the two special vertices in the puzzle. 
 
 ![An actor collaboration graph](figures/ch3-eulerpath.png)
 
