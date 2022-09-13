@@ -1,4 +1,6 @@
-# When the Relationship Status is Simple: <br>Representing Graphs. 
+# When the Relationship Status is Simple: <br>Representing Graphs.
+
+[Link to slides](https://slides.com/neeldhara/dsa1-w03)
 
 ## Drawing and Walking Challenges
 
@@ -6,14 +8,14 @@ At some point of time in your life, you have likely been challenged to draw a ki
 
 ![A common drawing challenge.](figures/draw-K4.png)
 
-without ever lifting your pencil/pen/quill off the paper. You may have noticed that there are figures that are particularly elusive to this persistent style of drawing, while others are pleasingly possible to draw in this fashion. 
+without ever lifting your pencil/pen/quill off the paper. You may have noticed that there are figures that are particularly elusive to this persistent style of drawing, while others are pleasingly possible to draw in this fashion.
 
 :::{.callout-warning collapse="true"}
 ## (Spoiler) Beth Thomas demonstrating what drawing challenges are doable
 <iframe width="560" height="315" src="https://www.youtube.com/embed/E0BQrk49tbk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 :::
 
-The city of Königsberg in Prussia (now Kaliningrad, Russia) was set on both sides of the Pregel River, and included two large islands—Kneiphof and Lomse—which were connected to each other, and to the two mainland portions of the city, by seven bridges. 
+The city of Königsberg in Prussia (now Kaliningrad, Russia) was set on both sides of the Pregel River, and included two large islands—Kneiphof and Lomse—which were connected to each other, and to the two mainland portions of the city, by seven bridges.
 
 :::{.callout-caution}
 ## The Problem
@@ -34,7 +36,7 @@ The question was addressed and answered by Euler (1736). He did not solve this b
 
 The picture below shows a few popular actors, with edges connecting pairs of those who have worked together in a movie together^[I've been told that this representation is not complete, and indeed, I have only verified that the connections are justified... some of the missing edges are likely to be inaccurate.]. The example is designed so that there are exactly two actors who participate in an odd number of pairings.
 
-We can work through the "bridges puzzle" on this graph. In the classroom, we all started with the vertex representing Juhi Chawla, "walked around" using every connection exactly once, and the fun effect is that everyone ends up at the vertex representing Rishi Kapoor (or solves the puzzle incorrectly). From here, you can probably begin to guess the role of the two special vertices in the puzzle. 
+We can work through the "bridges puzzle" on this graph. In the classroom, we all started with the vertex representing Juhi Chawla, "walked around" using every connection exactly once, and the fun effect is that everyone ends up at the vertex representing Rishi Kapoor (or solves the puzzle incorrectly). From here, you can probably begin to guess the role of the two special vertices in the puzzle.
 
 ![An actor collaboration graph](figures/ch3-eulerpath.png)
 
@@ -53,9 +55,9 @@ The origins of this problem --- the so-called "Knight's Tour" --- goes all the w
 
 ![An animated example of a knight's tour.](figures/ch3-kt-anim.gif)
 
-Although deceptively similar to the problem of the bridges, this is a different problem with two important contrasts: 
+Although deceptively similar to the problem of the bridges, this is a different problem with two important contrasts:
 
-1. we were previously not allowed to reuse _bridges_, here we are not allowed to reuse _squares_, and 
+1. we were previously not allowed to reuse _bridges_, here we are not allowed to reuse _squares_, and
 2. we were previously obliged to use _every_ bridge, here we are _not_ required to make every possible move that exists.
 
 Generalizing from the 8x8 chessboard, you could ask yourself what $(n \times n)$ boards admit such tours.
@@ -69,9 +71,9 @@ Generalizing from the 8x8 chessboard, you could ask yourself what $(n \times n)$
 
 ## Abstractions via Graphs
 
-It's useful to model such problems using _graphs_ (aka _networks_). And we're not talking sine curves here --- a graph in our context is a structure that represents relationships between entities. 
+It's useful to model such problems using _graphs_ (aka _networks_). And we're not talking sine curves here --- a graph in our context is a structure that represents relationships between entities.
 
-Usually these relationships are between two entities at a time. Indeed, this is typically already quite a bit to keep track of, hence graphs that do more are said to be hyper. That is to say, graphs that model relationships involving more than two entities in one go are generally called _hypergraphs_, and they will be a story for another day. 
+Usually these relationships are between two entities at a time. Indeed, this is typically already quite a bit to keep track of, hence graphs that do more are said to be hyper. That is to say, graphs that model relationships involving more than two entities in one go are generally called _hypergraphs_, and they will be a story for another day.
 
 For now, we will variously refer to entities as _vertices_ or _nodes_, and relationships as _edges_ or _connections_. Come to think of it, graphs are everywhere:
 
@@ -97,13 +99,13 @@ Sometimes, it is reasonable that there are multiple edges between a fixed pair o
 
 A _simple_ graph is one that does not have either self-loops or multiedges.
 
-Finally, it is worth mentioning that some relationships naturally connect more two entities. For example, in an actor collaboration graph, you would find edges between Amitabh Bachchan, Juhi Chawla, and Shah Rukh Khan. You would also find edges between Akshay Kumar, Dhanush, and Sonam Kapoor. In the first example, there happens to be one film that all three actors feature in together, while this is not the case in the latter, at least at the time of this writing. As such, the graph does not have enough structure to reveal this distinction: it looks exactly the same in both cases! 
+Finally, it is worth mentioning that some relationships naturally connect more two entities. For example, in an actor collaboration graph, you would find edges between Amitabh Bachchan, Juhi Chawla, and Shah Rukh Khan. You would also find edges between Akshay Kumar, Dhanush, and Sonam Kapoor. In the first example, there happens to be one film that all three actors feature in together, while this is not the case in the latter, at least at the time of this writing. As such, the graph does not have enough structure to reveal this distinction: it looks exactly the same in both cases!
 
-For an actor-collaboration graph, allowing for $n$-way relationships would make room for accurately capturing information about both actors and movies. Indeed, every movie could be represented by an 'edge' --- the subset of actors who belonged to the cast. Such graphs are called _hypergraphs_ or _set systems_. 
+For an actor-collaboration graph, allowing for $n$-way relationships would make room for accurately capturing information about both actors and movies. Indeed, every movie could be represented by an 'edge' --- the subset of actors who belonged to the cast. Such graphs are called _hypergraphs_ or _set systems_.
 
 While hypergraphs are a very useful generalization of graphs, they will be largely out of scope for our discussions in this course. To make up for that, here is a different workaround to capture all the information we have in the actor-collaboration graph example. Instead of having a vertex for every actor, we introduce a vertex for every actor _and_ for every movie. Now, an actor $a$ and a movie $m$ are connected by an edge if $a$ belongs to the cast of $m$. Observe that this approach can be used to "convert" any hypergraph into a graph.
 
-A little more terminology before we move on: I promise that we're almost done introducing new words! 
+A little more terminology before we move on: I promise that we're almost done introducing new words!
 
 For an undirected graph, a vertex $u$ is called a _neighbor_ of a vertex $v$ if $(u,v)$ is an edge. For a directed graph, the presence of the edge $(u,v)$ would make $v$ an _out-neighbor_ of $u$ and $u$ an _in-neighbor_ of $v$.
 
@@ -117,7 +119,7 @@ If you wanted to tell your program about a graph, there are a few different ways
 :::{.callout-caution}
 # How would you do it?
 
-Before reading further, it would be worth spending some time thinking about how you would represent a graph. Based on our discussions so far, you might counter this with the question: "Well, what do _you_ need it for?" --- and that's a fair reaction! 
+Before reading further, it would be worth spending some time thinking about how you would represent a graph. Based on our discussions so far, you might counter this with the question: "Well, what do _you_ need it for?" --- and that's a fair reaction!
 
 Listed below are some fairly common operations that come up when dealing with graphs.
 
@@ -131,7 +133,7 @@ Listed below are some fairly common operations that come up when dealing with gr
 ```
 :::
 
-**Edge Lists.** The most natural way is to perhaps just braindump the full list of edges. This gives us all we need to know about $G$. 
+**Edge Lists.** The most natural way is to perhaps just braindump the full list of edges. This gives us all we need to know about $G$.
 
 Since this is just a plain list, you could implement it either as an array or as a linked list.
 
@@ -146,9 +148,9 @@ $$ \begin{equation*}
 \end{equation*}
 $$
 
-**Adjacency Lists.** Finally, you could have an array $A$ of size $n$, with $A[i]$ pointing to a list of the neighbors of the vertex $i$ if the graph is undirected, and out-neighbors if the graph is directed. 
+**Adjacency Lists.** Finally, you could have an array $A$ of size $n$, with $A[i]$ pointing to a list of the neighbors of the vertex $i$ if the graph is undirected, and out-neighbors if the graph is directed.
 
-Again, since these are just lists, they could be, in principle, implemented either as arrays or linked lists. We will follow the traditional choice of implementing them as lists. 
+Again, since these are just lists, they could be, in principle, implemented either as arrays or linked lists. We will follow the traditional choice of implementing them as lists.
 
 It should be no surprise at this point that there is no "right" answer to the choice of representation. You might have noticed, for instance, that an adjacency matrix always reserves $n^2$ units of space to store $G$, while the amount of space consumed by the other two representations is proportional to $m$. Notice that the number of edges in a graph can be as large as $\approx n^2$ for simple graphs, so there certainly are graphs for which the space consumption looks the same for all representations. However, for graphs where there aren't as many edges, then the matrix representation is likely wasteful in terms of space, although you may have other good reasons for sticking to it.
 
@@ -171,9 +173,9 @@ Here's a run down of how the representations above fare with respect to some of 
 | Finding degree(v)         | n-Tolerable | Decent      | m-Tolerable |
 | Check if (u,v) is an edge | Brilliant   | Decent      | m-Tolerable |
 
-It would be a good exercise to validate that these claims indeed make sense. 
+It would be a good exercise to validate that these claims indeed make sense.
 
-Now that we're comfortable with storing graphs, next up, we'll talk about exploring them. 
+Now that we're comfortable with storing graphs, next up, we'll talk about exploring them.
 
 
 <br>

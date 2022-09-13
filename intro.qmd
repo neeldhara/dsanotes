@@ -6,17 +6,17 @@
 
 We will keep it casual and skip formal definitions for now. 👀
 
-Data structures give us principled ways to *stow away* information. It's important to do this nicely based on what you want to *do* with the information. 
+Data structures give us principled ways to *stow away* information. It's important to do this nicely based on what you want to *do* with the information.
 
-For example, the notes you might be taking in this class is information. If you have no plans of revisiting them later, you can take them as you please, or better yet, not take them at all! 
+For example, the notes you might be taking in this class is information. If you have no plans of revisiting them later, you can take them as you please, or better yet, not take them at all!
 
-However, you want your notes optimised for giving you quality company during a 2AM revision session on exam day, competing with Maggi for attention, you want your notes to be competently taken: they don't have to be neat, and it's enough for them to be useful. 
+However, you want your notes optimised for giving you quality company during a 2AM revision session on exam day, competing with Maggi for attention, you want your notes to be competently taken: they don't have to be neat, and it's enough for them to be useful.
 
 On the other hand, if you are taking notes so that a special someone who will inevitably miss a few classes will almost certainly ask for later, then you would be making notes to impress, and that potentially requires a different approach.
 
 
 :::{.callout-tip}
-## Throughout this course, we will try to make sense of trade-offs. 
+## Throughout this course, we will try to make sense of trade-offs.
 
 We'll equip ourselves with ideas that will ultimately help you decide questions like: how do you organise the clothes in your cupboard?
 
@@ -64,7 +64,7 @@ px = "x^2 - 7x + 12";
 ![](figures/ch1-meme01.jpeg "Meme: So preoccupied with if you could, you didn't stop to ask if you should.")
 :::
 
-While this is a perfectly faithful representation, you can imagine that it would be slightly painful to work with. You would have to write some code that can "pull out" the parts of the string that represent the *numbers* you care about (in this example, $b = -7$ and $c = 12$), so that you can move on to your calculation, which is an *expression* involving numbers. 
+While this is a perfectly faithful representation, you can imagine that it would be slightly painful to work with. You would have to write some code that can "pull out" the parts of the string that represent the *numbers* you care about (in this example, $b = -7$ and $c = 12$), so that you can move on to your calculation, which is an *expression* involving numbers.
 
 Given that a quadratic with the leading coefficient normalized to one is uniquely determined by two numbers, it seems a lot simpler to directly represent the polynomial as two integers instead:
 
@@ -74,18 +74,18 @@ px_c = 12
 ```
 
 
-You might appreciate that this saves us quite some circus and we can quite directly get to the computation we're interested in. What if you cared about higher order polynomials? You may want to solve them (even if you [run out of expressions for solutions pretty quickly](https://www.youtube.com/watch?t=2543&v=O5eH3x3sTNA&feature=youtu.be), you might be interested in [other ways of getting to the roots](https://math.stackexchange.com/a/1386830)), or manipulate them in other ways (for example, by adding or [multiplying](https://www.youtube.com/watch?v=h7apO7q16V0) them). 
+You might appreciate that this saves us quite some circus and we can quite directly get to the computation we're interested in. What if you cared about higher order polynomials? You may want to solve them (even if you [run out of expressions for solutions pretty quickly](https://www.youtube.com/watch?t=2543&v=O5eH3x3sTNA&feature=youtu.be), you might be interested in [other ways of getting to the roots](https://math.stackexchange.com/a/1386830)), or manipulate them in other ways (for example, by adding or [multiplying](https://www.youtube.com/watch?v=h7apO7q16V0) them).
 
 :::{.callout-caution}
-## Food for thought. 
-How would you represent higher-order polynomials? What about multivariate polynomials? Is there a way that you might be able to capture an algebraic expression for a polynomial without either using strings or just the coefficients?  
+## Food for thought.
+How would you represent higher-order polynomials? What about multivariate polynomials? Is there a way that you might be able to capture an algebraic expression for a polynomial without either using strings or just the coefficients?
 :::
 
 
 ## Representing a Game - I
 
 
-The [game of 100](https://www.youtube.com/watch?v=846A4rgO_os) goes like this: I pick a number between 1 and 10, and then you pick one within the next ten numbers, and on and on. The first person to reach 100 wins. 
+The [game of 100](https://www.youtube.com/watch?v=846A4rgO_os) goes like this: I pick a number between 1 and 10, and then you pick one within the next ten numbers, and on and on. The first person to reach 100 wins.
 
 
 
@@ -99,7 +99,7 @@ The [game of 100](https://www.youtube.com/watch?v=846A4rgO_os) goes like this: I
 ## SPOILER ALERT
 	...whoever starts has a way of winning the game:
 
-		0. To begin with, I say 1. 
+		0. To begin with, I say 1.
 		1. No matter what number you pick, I can say 12.
 		2. No matter what number you pick, I can say 23.
 		3. No matter what number you pick, I can say 34.
@@ -114,7 +114,7 @@ The [game of 100](https://www.youtube.com/watch?v=846A4rgO_os) goes like this: I
 
 What if you want to write a program that mimics the winning strategy?
 
-Note that this game can go on for at most a 100 steps, and in fact exactly 20 steps (or ten rounds) when you employ said winning strategy. So one way to go about this is to declare 20 variables to track the 20 numbers exchanged between the players. But a moment's reflection may reveal that you *don't* need to store anything at all. 
+Note that this game can go on for at most a 100 steps, and in fact exactly 20 steps (or ten rounds) when you employ said winning strategy. So one way to go about this is to declare 20 variables to track the 20 numbers exchanged between the players. But a moment's reflection may reveal that you *don't* need to store anything at all.
 
 
 :::{.callout-caution}
@@ -201,7 +201,7 @@ if(user_move_2):
 ...and so on and on, you get the drift.
 
 :::{.callout-caution}
-## Food for thought. 
+## Food for thought.
 Do you really need ten variables to track the game? If you were instead implementing the always cheat or always cooperate strategy, how many variables would you need? What about the strategies of the grudger and the detective?
 :::
 
@@ -214,14 +214,14 @@ It seems like implementing the majority mover strategy would really require keep
 
 ## You could also...
 
-...track the number of cooperate moves along with the number of rounds; or the number of cheat moves and the number of cooperate moves. 
+...track the number of cooperate moves along with the number of rounds; or the number of cheat moves and the number of cooperate moves.
 
 At this point it's a matter of taste :)
 :::
 
 How about a **completely random** player? This one chooses a number **K** between 1 and N uniformly at random (let's not worry about *how* this is done for now, because that would be a story for another day), where N is the number of rounds played so far; and mimics the other player's **K**th move. To implement this strategy, you really would need to keep track of the user's entire game history with the five variables, and also assume that you have a way of picking a number at random.
 
-Finally, consider that instead of fixing your program to play five rounds — 🥱 — you want to politely ask the user how m*any *rounds they want to play. 
+Finally, consider that instead of fixing your program to play five rounds — 🥱 — you want to politely ask the user how m*any *rounds they want to play.
 
 
 
@@ -235,7 +235,7 @@ Finally, consider that instead of fixing your program to play five rounds — �
 Well, for the first few players, this is just a matter of upgrading your for loop (which you should have switched to already when you realised that you don't need all. those. variables.) to use N: and you are done.
 
 :::{.callout-caution}
-## Food for thought. 
+## Food for thought.
 How will you implement this version if you are working with our latest player? If you happen to have a very enthusiastic user who asks for half a million rounds, would you be able to declare that many variables all at once, while your program is running? Notably, you don't know what the user is going to say ahead of time!
 :::
 
@@ -254,7 +254,7 @@ If you are implementing a card^[Assume you are working with the [standard 52-car
 One way to meet these requirements is to declare a collection of 52 boolean (i.e, true/false or 0/1) variables to represent the hand: the cards in the hand are set to true while cards that don't belong are set to false.
 
 :::{.callout-caution}
-## Food for thought. 
+## Food for thought.
 What do you like about this method? What don't you like about it?
 :::
 
@@ -262,16 +262,16 @@ What do you like about this method? What don't you like about it?
 Here'a another way, though: you could agree on a notation for the cards in the deck: e.g, a standard one is to use a number, A/J/Q/K to denote the value, and S/C/D/H to denote the suit, so every card can be represented as a pair of characters. For example the Ace of Diamonds would be AD, the five of spades would be 5S and the King of Hearts would be KH. With this in place, you could represent a hand also by simply *concatenating* these string representations of the cards in the hand.
 
 :::{.callout-caution}
-## Food for thought. 
+## Food for thought.
 What do you like about this method? What don't you like about it?
 :::
 
 
-Now for this toy example, if you were to implement both methods and clock the time taken to implement the four operations above, you may not notice a major difference. However, for actual applications, you may be in a situation where your *subsets* (here, the "hands") may be coming from a large *universe* (here, the "deck"). On the other hand, you may have a very large number of operations to take care of efficiently. 
+Now for this toy example, if you were to implement both methods and clock the time taken to implement the four operations above, you may not notice a major difference. However, for actual applications, you may be in a situation where your *subsets* (here, the "hands") may be coming from a large *universe* (here, the "deck"). On the other hand, you may have a very large number of operations to take care of efficiently.
 
 
 :::{.callout-caution}
-## Food for thought. 
+## Food for thought.
 Are there other ways that you might want to store this kind of information, given the things you want to do are as enlisted above?
 :::
 

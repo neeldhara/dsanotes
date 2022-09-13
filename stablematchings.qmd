@@ -1,0 +1,16 @@
+# Happy Marriages: Stable Matchings
+
+[Link to slides](https://slides.com/neeldhara/dsa1-w06/)
+
+Notes coming soon.
+
+## References
+
+[Numberphile video about the algorithm](https://www.youtube.com/watch?v=Qcv1IqHWAzg)
+
+[Numberphile video about the proof](https://www.youtube.com/watch?v=LtTV6rIxhdo)
+
+[Notes on implementation details](https://cse.buffalo.edu/faculty/atri/courses/331/fall14/handouts/GS-details.pdf)
+
+
+

@@ -10,7 +10,11 @@ book:
     - index.qmd
     - intro.qmd
     - sequences.qmd
+    - cardtricks.qmd
     - graphs.qmd
+    - debruijn.qmd
+    - traversals.qmd
+    - stablematchings.qmd
 
 bibliography: references.bib
 
@@ -22,6 +26,6 @@ format:
   pdf:
     documentclass: scrreprt
 
-resources: 
+resources:
   - styles.css
   - fonts/

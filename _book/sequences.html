@@ -2,39 +2,45 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.363">
+<meta name="generator" content="quarto-1.1.189">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Casual Musings on  Data Structures and Algorithms - 2&nbsp; Playlists and Tweet Threads: Representing Sequential Information</title>
+<title>Casual Musings on  Data Structures and Algorithms - 2&nbsp; Of Playlists and Tweet Threads: Representing Sequential Information</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 </style>
+
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
-<meta name="quarto:offset" content="./">
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
-<link href="./graphs.html" rel="next">
+<meta name="quarto:offset" content="./">
+<link href="./cardtricks.html" rel="next">
 <link href="./intro.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link id="quarto-text-highlighting-styles" href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -55,17 +61,34 @@ ul.task-list{list-style: none;}
   }
 }</script>
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar floating slimcontent">
+
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Playlists and Tweet Threads: <br>Representing Sequential Information</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Of Playlists and Tweet Threads: <br>Representing Sequential Information</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -100,12 +123,32 @@ ul.task-list{list-style: none;}
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sequences.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Playlists and Tweet Threads: <br>Representing Sequential Information</span></a>
+  <a href="./sequences.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Of Playlists and Tweet Threads: <br>Representing Sequential Information</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./graphs.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">When the Relationship Status is Simple: <br>Representing Graphs.</span></a>
+  <a href="./cardtricks.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Card Tricks with Card Stacks</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./graphs.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">When the Relationship Status is Simple: <br>Representing Graphs.</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./debruijn.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Of Cards and Graphs: <br> de Bruijn seuqences</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./traversals.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Walking Around via Euler Tours</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./stablematchings.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Happy Marriages: Stable Matchings</span></a>
   </div>
 </li>
     </ul>
@@ -126,17 +169,23 @@ document.body.appendChild(script);
 </script>
 
 </div></div>
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#arrays" id="toc-arrays" class="nav-link active" data-scroll-target="#arrays"><span class="toc-section-number">2.1</span>  Arrays</a></li>
+  <li><a href="#linked-lists" id="toc-linked-lists" class="nav-link" data-scroll-target="#linked-lists"><span class="toc-section-number">2.2</span>  Linked Lists</a></li>
+  <li><a href="#comparison" id="toc-comparison" class="nav-link" data-scroll-target="#comparison"><span class="toc-section-number">2.3</span>  Comparison</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Playlists and Tweet Threads: <br>Representing Sequential Information</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Of Playlists and Tweet Threads: <br>Representing Sequential Information</span></h1>
 </div>
-
-
 
 
 
@@ -149,14 +198,134 @@ document.body.appendChild(script);
 
 </header>
 
-<p><a href="hhttps://slides.com/neeldhara/dsa1-w01#/2/1">Link to Slides</a></p>
-<p>(Coming soon.)</p>
+<p><a href="https://slides.com/neeldhara/dsa1-w01#/2/1">Link to Slides</a></p>
+<p>So far, we have worked with <em>atomic</em> types, which is to say variables that can hold a “single kind of data” for us — like integers, characters, strings, booleans, and so on. Often, however, we need to work with compound types, which is to say, a bunch of these things taken together. For example, you may have sensed that when we spoke of maintaining <a href="./intro.html">a set of cards</a> earlier with 52 booleans, it may have been nicer if they could be strung together into a single, unified structure: for one, it saves you having to keep track of a large number of variables, and further, it might be easier — as we will find out — to manipulate the data in response to operations that we may want to support.</p>
+<p>When you speak of a bunch of objects, it is useful to agree on whether you interpret the collection as an <em>ordered</em> or <em>unordered</em> set. Consider the following examples:</p>
+<ol type="1">
+<li>Your playlist of happy songs</li>
+<li>A stack of cards</li>
+<li>People living in a house</li>
+<li>Teams that played in the Asia Cup 2022</li>
+<li>Chess pieces on a board mid-game</li>
+</ol>
+<div class="page-columns page-full"><p>While some people play their happy songs in shuffle mode, for some the playlist is carefully organized, and the order matters. A stack of cards and chess pieces on a board are clearly collections with a natural sense of order, and one that is very likely to be important. On the other hand, people who live in a particular house or the set of teams that participated in the Asia cup in 2022 can be thought of as sets with no underlying order: of course, if you had to impose one you could cook something up<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> (e.g, alphabetical, favorites, and so on). We will focus on storing ordered lists for now and return to sets in due course.</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;For example, the C++ implementation of <code>set</code> maintains a default order even though it is, by nomenclature, modeling unordered sets. On the other hand, the <code>unordered_set</code> data structure in the C++ STL throws all caution to the wind and buys faster operations on average.</p></li></div></div>
+<p>There are a few different ways that you can store a list of things in a computer’s memory. Imagine that you are real estate agent and you want to book some houses in a complex for your current and future clients. Stretching your imagination a little bit further, say all houses are numbered from 1 to 1000 and are positioned on a straight line in the natural order (i.e, 2 after 1, 3 after 2, and so on). Some houses are occupied and others are not. If you reserve <span class="math inline">k</span> houses, management will find some contiguous block of <span class="math inline">k</span> unoccupied houses and give you the number of the first house in the block. For instance, if you ask for 50 houses, you would get a letter from the management saying 50 houses starting from #420 are yours. If you need 20 more houses later, you would get a letter from the management saying 70 houses starting from #777 are yours. That’s right: they are not obiligied to give you houses #470 to #489, indeed, these may not be avaiailable. They <em>could</em> just give you an additional chunk of 20 houses somewhere else, but sadly that’s not how they roll: them management, them rules. There are also no refunds: you can’t give back reserved houses.</p>
+<p>Now here comes our first dilemma: how many houses do we reserve? Say we have 20 clients: it is clear that we need to reserve <em>at least</em> 20 houses, but should we reserve a few more? Reservations are not free, so we don’t want to reserve a very large number of houses either: remember, there are no refunds. But on the other hand, if we reserve too few, and we end up with more clients than the number of houses we’ve reserved, we will be in a sticky situation — worst case some clients may have to move, which is not ideal. You will have to work on coming up with a reasonable estimate of how many clients you will eventually have, and hope for the best.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/ch2-houses-01.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<p></p><figcaption class="figure-caption">Expanding your reservations can get tricky</figcaption><p></p>
+</figure>
+</div>
+<p>Over time you find that this business of estimating the number of clients you have is an unpleasant one: both under and overestimates lead to losses, which makes you wonder if there are apartments that have more flexible options. You look around, and why yes, you find a different apartment complex — again a thousand houses on a line neatly numbered 1 to 1000 from left to right, but this time, management reserves one house at a time. You want a new house, you simply ask for one. But there’s a catch: the paperwork here requires you to submit the client’s information, and they directly get their house number. So this is actually quite efficient: the management does all the work and you can reserve exactly what you need. All is well until it’s time for Diwali and you realize you don’t know where your clients are housed, and you can’t send them postcards, sweets, and advertisements.</p>
+<p>You could, of course, just call your clients and ask them for their house numbers, but then this requires you to maintain some kind of register, and let us just say that you are not good with that kind of thing. So here’s what you do instead: you only keep the first client’s address, because that’s just one thing that’s easy to remember. Then you ask your <span class="math inline">i</span>-th client to remember the address of the <span class="math inline">(i+1)</span>-th client: they are slightly bewildered but you tell them it’s for insurance. Now if you want to pay a visit to your <span class="math inline">\ell</span>-th client, you just start fro your first one, and follow the trail. Peculiar, but works.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/ch2-houses-02.gif" class="img-fluid figure-img" style="width:70.0%"></p>
+<p></p><figcaption class="figure-caption">Walking around to find your clients with new management.</figcaption><p></p>
+</figure>
+</div>
+<p>Note that with the previous maangement this was never a problem: you had a contiguous block of houses that you allocated sequentially, so your <span class="math inline">i</span>-th client’s house address was always at hand if you were good with arithmetic or had a calculator: simply add <span class="math inline">(i-1)</span> to the house number of the first client.</p>
+<p>As analogies go this was both unrealistic and imprefect, but I hope it gives you a sense of the main trade-offs involved in the two ways we have to store sequential data — very roughly speaking:</p>
+<ul>
+<li>in contiguous blocks, access is easy, flexibility is hard;</li>
+<li>with elements all over the place, access is indirect but the structure is relatively flexible.</li>
+</ul>
+<section id="arrays" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="arrays"><span class="header-section-number">2.1</span> Arrays</h2>
+<p>Quoting <a href="https://en.wikipedia.org/wiki/Array_data_structure">Wikipedia</a>:</p>
+<blockquote class="blockquote">
+<p>An array is a data structure consisting of a collection of elements (values or variables), each identified by at least one array index or key. An array is stored such that the position of each element can be computed from its index tuple by a mathematical formula.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>For example, an array of 10 32-bit (4-byte) integer variables, with indices 0 through 9, may be stored as 10 words at memory addresses 2000, 2004, 2008, …, 2036, (in hexadecimal: 0x7D0, 0x7D4, 0x7D8, …, 0x7F4) so that the element with index i has the address 2000 + (i × 4).[4]</p>
+</blockquote>
+</section>
+<section id="linked-lists" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="linked-lists"><span class="header-section-number">2.2</span> Linked Lists</h2>
+<p>Quoting <a href="https://en.wikipedia.org/wiki/Linked_list">Wikipedia</a>:</p>
+<blockquote class="blockquote">
+<p>A linked list is a linear collection of data elements whose order is not given by their physical placement in memory. Instead, each element points to the next. It is a data structure consisting of a collection of nodes which together represent a sequence. In its most basic form, each node contains: data, and a reference (in other words, a link) to the next node in the sequence. This structure allows for efficient insertion or removal of elements from any position in the sequence during iteration.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>More complex variants add additional links, allowing more efficient insertion or removal of nodes at arbitrary positions. A drawback of linked lists is that access time is linear (and difficult to pipeline). Faster access, such as random access, is not feasible. Arrays have better cache locality compared to linked lists.</p>
+</blockquote>
+</section>
+<section id="comparison" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="comparison"><span class="header-section-number">2.3</span> Comparison</h2>
+<p>Given a fully occupied array with n elements v/s a linked list with n elements, here are the costs of some operations that you might want to perform:</p>
+<table class="table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 21%">
+<col style="width: 28%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Operations</th>
+<th style="text-align: center;">Arrays</th>
+<th style="text-align: center;">Singly Linked List</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Looking up the i-th element</td>
+<td style="text-align: center;">instant</td>
+<td style="text-align: center;"><span class="math inline">\approx</span> i</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Adding a new element at the start</td>
+<td style="text-align: center;"><span class="math inline">\approx</span> n</td>
+<td style="text-align: center;">instant</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Adding a new element at the end</td>
+<td style="text-align: center;"><span class="math inline">\approx</span> n</td>
+<td style="text-align: center;"><span class="math inline">\approx</span> n</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Removing the i-th element</td>
+<td style="text-align: center;"><span class="math inline">\approx</span> n-i</td>
+<td style="text-align: center;"><span class="math inline">\approx</span> i</td>
+</tr>
+</tbody>
+</table>
 
+<!--
+    - index.qmd
+    - intro.qmd
+    - sequences.qmd
+    - cardtricks.qmd
+    - graphs.qmd
+    - traversals.qmd
+    - stablematchings.qmd
+ -->
+
+
+</section>
 
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -206,7 +375,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
@@ -241,8 +411,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./graphs.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">When the Relationship Status is Simple: <br>Representing Graphs.</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./cardtricks.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Card Tricks with Card Stacks</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

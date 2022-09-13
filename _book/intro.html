@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.363">
+<meta name="generator" content="quarto-1.1.189">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,10 +11,15 @@
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -53,7 +58,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -66,7 +71,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -80,13 +85,14 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
-<meta name="quarto:offset" content="./">
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
 <link href="./sequences.html" rel="next">
 <link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
@@ -94,10 +100,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link id="quarto-text-highlighting-styles" href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -118,7 +124,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   }
 }</script>
 
-  <script defer="" src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
  var mathElements = document.getElementsByClassName("math");
  var macros = [];
@@ -133,12 +139,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
    });
 }}});
   </script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 
 <link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-sidebar floating">
+
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -179,12 +186,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sequences.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Playlists and Tweet Threads: <br>Representing Sequential Information</span></a>
+  <a href="./sequences.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Of Playlists and Tweet Threads: <br>Representing Sequential Information</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./graphs.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">When the Relationship Status is Simple: <br>Representing Graphs.</span></a>
+  <a href="./cardtricks.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Card Tricks with Card Stacks</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./graphs.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">When the Relationship Status is Simple: <br>Representing Graphs.</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./debruijn.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Of Cards and Graphs: <br> de Bruijn seuqences</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./traversals.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Walking Around via Euler Tours</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./stablematchings.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Happy Marriages: Stable Matchings</span></a>
   </div>
 </li>
     </ul>
@@ -205,15 +232,15 @@ document.body.appendChild(script);
 </script>
 
 </div></div>
-        <nav id="TOC" role="doc-toc">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#wdym-data-structures" id="toc-wdym-data-structures" class="nav-link active" data-scroll-target="#wdym-data-structures"> <span class="header-section-number">1.1</span> WDYM, data structures?</a></li>
-  <li><a href="#representing-polynomials" id="toc-representing-polynomials" class="nav-link" data-scroll-target="#representing-polynomials"> <span class="header-section-number">1.2</span> Representing Polynomials</a></li>
-  <li><a href="#representing-a-game---i" id="toc-representing-a-game---i" class="nav-link" data-scroll-target="#representing-a-game---i"> <span class="header-section-number">1.3</span> Representing a Game - I</a></li>
-  <li><a href="#representing-a-game---ii" id="toc-representing-a-game---ii" class="nav-link" data-scroll-target="#representing-a-game---ii"> <span class="header-section-number">1.4</span> Representing a Game - II</a></li>
-  <li><a href="#representing-a-subset-of-a-deck-of-cards" id="toc-representing-a-subset-of-a-deck-of-cards" class="nav-link" data-scroll-target="#representing-a-subset-of-a-deck-of-cards"> <span class="header-section-number">1.5</span> Representing a subset of a deck of cards</a></li>
+  <li><a href="#wdym-data-structures" id="toc-wdym-data-structures" class="nav-link active" data-scroll-target="#wdym-data-structures"><span class="toc-section-number">1.1</span>  WDYM, data structures?</a></li>
+  <li><a href="#representing-polynomials" id="toc-representing-polynomials" class="nav-link" data-scroll-target="#representing-polynomials"><span class="toc-section-number">1.2</span>  Representing Polynomials</a></li>
+  <li><a href="#representing-a-game---i" id="toc-representing-a-game---i" class="nav-link" data-scroll-target="#representing-a-game---i"><span class="toc-section-number">1.3</span>  Representing a Game - I</a></li>
+  <li><a href="#representing-a-game---ii" id="toc-representing-a-game---ii" class="nav-link" data-scroll-target="#representing-a-game---ii"><span class="toc-section-number">1.4</span>  Representing a Game - II</a></li>
+  <li><a href="#representing-a-subset-of-a-deck-of-cards" id="toc-representing-a-subset-of-a-deck-of-cards" class="nav-link" data-scroll-target="#representing-a-subset-of-a-deck-of-cards"><span class="toc-section-number">1.5</span>  Representing a subset of a deck of cards</a></li>
   </ul>
 </nav>
     </div>
@@ -224,8 +251,6 @@ document.body.appendChild(script);
 <div class="quarto-title">
 <h1 class="title d-none d-lg-block"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Data Structures and Structured Data</span></h1>
 </div>
-
-
 
 
 
@@ -301,7 +326,7 @@ This <em>is</em> in fact a useful framing!
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/ch1-table01.png" class="img-fluid figure-img"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">Table 1 Revisited. No Free Lunches</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Table 1 Revisited. No Free Lunches</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -314,7 +339,7 @@ This <em>is</em> in fact a useful framing!
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/ch1-lockdownmath.png" class="img-fluid figure-img"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">A screenshot from #LockdownMath showing Grant Sanderson solving quadratics.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">A screenshot from #LockdownMath showing Grant Sanderson solving quadratics.</figcaption><p></p>
 </figure>
 </div>
 <p>Now, it’s quite natural to want to “write a program”, so to speak, that can take a quadratic equation such as <span class="math inline">x^2 - 7x + 12</span> as input and output its two roots.</p>
@@ -385,7 +410,7 @@ SPOILER ALERT
 <div class="callout-body-container callout-body">
 <pre><code>...whoever starts has a way of winning the game:
 
-    0. To begin with, I say 1. 
+    0. To begin with, I say 1.
     1. No matter what number you pick, I can say 12.
     2. No matter what number you pick, I can say 23.
     3. No matter what number you pick, I can say 34.
@@ -425,7 +450,7 @@ Exercise
 <figure class="figure">
 <img src="figures/ch1-game-trust.png" title="Alt text: The Game of Trust. You have one choice. In front of you is a machine: if you put a coin in the machine, the other player gets three coins and vice versa. You both can either choose to COOPERATE (put in coin), or CHEAT (don't put in coin). The image shows a cartoon machine with players on either side." class="img-fluid figure-img">
 </figure>
-<p></p><figcaption aria-hidden="true" class="figure-caption">Illustration from an implementation by <a href="https://ncase.me/trust/">Nicky Case</a>.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Illustration from an implementation by <a href="https://ncase.me/trust/">Nicky Case</a>.</figcaption><p></p>
 </figure>
 </div>
 <p>Suppose you want to implement your own version of this game, where the program responds to inputs from the user and plays according to a specific, pre-meditated strategy. Remember you have seen some strategies already:</p>
@@ -434,7 +459,7 @@ Exercise
 <figure class="figure">
 <img src="figures/ch1-players-trust.png" title="Five player strategies also outlined below." class="img-fluid figure-img">
 </figure>
-<p></p><figcaption aria-hidden="true" class="figure-caption">A second illustration from the same implementation by <a href="https://ncase.me/trust/">Nicky Case</a>.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">A second illustration from the same implementation by <a href="https://ncase.me/trust/">Nicky Case</a>.</figcaption><p></p>
 </figure>
 </div>
 <p>We reproduce these strategies below:</p>
@@ -614,16 +639,34 @@ Food for thought.
 
 
 </section>
-<section class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn1" role="doc-endnote"><p>Assume you are working with the <a href="https://en.wikipedia.org/wiki/Standard_52-card_deck">standard 52-card deck</a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>Assume you are working with the <a href="https://en.wikipedia.org/wiki/Standard_52-card_deck">standard 52-card deck</a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -673,7 +716,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
@@ -709,7 +753,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
   <div class="nav-page nav-page-next">
       <a href="./sequences.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Playlists and Tweet Threads: <br>Representing Sequential Information</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Of Playlists and Tweet Threads: <br>Representing Sequential Information</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
