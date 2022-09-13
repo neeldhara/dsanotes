@@ -27,7 +27,7 @@ Now here comes our first dilemma: how many houses do we reserve? Say we have 20 
 
 Over time you find that this business of estimating the number of clients you have is an unpleasant one: both under and overestimates lead to losses, which makes you wonder if there are apartments that have more flexible options. You look around, and why yes, you find a different apartment complex --- again a thousand houses on a line neatly numbered 1 to 1000 from left to right, but this time, management reserves one house at a time. You want a new house, you simply ask for one. But there's a catch: the paperwork here requires you to submit the client's information, and they directly get their house number. So this is actually quite efficient: the management does all the work and you can reserve exactly what you need. All is well until it's time for Diwali and you realize you don't know where your clients are housed, and you can't send them postcards, sweets, and advertisements.
 
-You could, of course, just call your clients and ask them for their house numbers, but then this requires you to maintain some kind of register, and let us just say that you are not good with that kind of thing. So here's what you do instead: you only keep the first client's address, because that's just one thing that's easy to remember. Then you ask your $i$-th client to remember the address of the $(i+1)$-th client: they are slightly bewildered but you tell them it's for insurance. Now if you want to pay a visit to your $\ell$-th client, you just start fro your first one, and follow the trail. Peculiar, but works.
+You could, of course, just call your clients and ask them for their house numbers, but then this requires you to maintain some kind of register, and let us just say that you are not good with that kind of thing. So here's what you do instead: you only keep the first client's address, because that's just one thing that's easy to remember. Then you ask your $i$-th client to remember the address of the $(i+1)$-th client: they are slightly bewildered but you tell them it's for insurance. Now if you want to pay a visit to your $\ell$-th client, you just start from your first one, and follow the trail. Peculiar, but works.
 
 ![Walking around to find your clients with new management.](figures/ch2-houses-02.gif){width=70%}
 
@@ -66,6 +66,10 @@ Given a fully occupied array with n elements v/s a linked list with n elements, 
 | Adding a new element at the end    | $\approx$ n   | $\approx$ n        |
 | Removing the i-th element          | $\approx$ n-i | $\approx$ i        |
 
+
+## What should you use?
+
+The correct answer is: it depends. If you expect your lists to be heavily manipulated, then linked lists are likely to be the better choice. On the other hand, if yuo are working with a list of a predictable size (or you at least have a known and reasonable upper bound on the size), and direct access is important to you, then arrays are the way to go. If you are dissatisfied with both methods, then consider transforming your unhappiness into motivation for discovering more sophisticated options!
 
 <!--
     - index.qmd
